@@ -34,7 +34,7 @@ dockerstack="$(aws elasticbeanstalk list-available-solution-stacks | \
     jq -r '.SolutionStacks[]' | grep -P '.+Amazon Linux.+running Docker' | head -1)"
 
 # Create the EB API environment
-cp ebs-options.json > tmp/$identifier/ebs-options.json || fail
+cp ebs-options.json tmp/$identifier/ebs-options.json || fail
 aws elasticbeanstalk create-environment \
     --application-name $identifier \
     --environment-name deployer-api \
