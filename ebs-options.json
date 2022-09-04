@@ -1,0 +1,8 @@
+[
+
+    {
+        "Namespace": "aws:autoscaling:launchconfiguration",
+        "OptionName": "IAMINSTANCEPROFILE",
+        "Value": "aws-elasticbeanstalk-ec2-role"
+    }
+]
